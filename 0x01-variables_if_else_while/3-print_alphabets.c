@@ -16,7 +16,7 @@ int main(void)
 		putchar(lo++);
 
 	while (up < ttlUP)
-		putchar(u++);
+		putchar(up++);
 
 	putchar('\n');
 	return (0);
