@@ -16,7 +16,10 @@ int print_last_digit(int n)
 	return (lst);
 	}
 	else
+	{
+		_putchar(0 + 48);
 		return (0);
+	}
 
 
 
