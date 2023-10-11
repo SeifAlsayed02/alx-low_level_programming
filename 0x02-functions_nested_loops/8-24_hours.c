@@ -11,7 +11,7 @@ void jack_bauer(void)
 	int n3 = 0;
 	int n4 = 0;
 
-	while (n1 != 2 && n2 != 4)
+	while (n1 != 2 || n2 != 4)
 	{
 		_putchar(n1 + 48);
 		_putchar(n2 + 48);
