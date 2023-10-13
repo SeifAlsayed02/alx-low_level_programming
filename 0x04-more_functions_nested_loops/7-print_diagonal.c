@@ -1,31 +1,30 @@
 #include "main.h"
 
 /**
- * more_numbers - Entry point
+ * print_diagonal - Entry point
+ * @n: number of times the character \ is printed
  *
  * Return: None.
  */
-
-void more_numbers(void)
+void print_diagonal(int n)
 {
-	int i;
-	int j;;
-
-	i = 0;
-
-	while (i < 10)
+	if (n <= 0)
 	{
-		j = 0;
-		while (j < 15)
-		{
-			if (j >= 10)
-			{
-				_putchar(((j / 10) % 10) + '0');
-			}
-			_putchar((j % 10) + '0');
-			j++;
-		}
 		_putchar('\n');
-		i++;
+	} else
+	{
+		int i, j;
+
+		for (i = 0; i < n; i++)
+		{
+			for (j = 0; j < n; j++)
+			{
+				if (j == i)
+					_putchar('\\');
+				else if (j < i)
+					_putchar(' ');
+			}
+			_putchar('\n');
+		}
 	}
-}
+}}
