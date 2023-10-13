@@ -8,23 +8,24 @@
  */
 void print_diagonal(int n)
 {
-	if (n <= 0)
-	{
-		_putchar('\n');
-	} else
-	{
-		int i, j;
+	int i, j, m;
 
-		for (i = 0; i < n; i++)
+	i = 0;
+
+	while (i < n)
+	{
+		j = i;
+		m = 0;
+		while (m < j)
 		{
-			for (j = 0; j < n; j++)
-			{
-				if (j == i)
-					_putchar('\\');
-				else if (j < i)
-					_putchar(' ');
-			}
-			_putchar('\n');
+			_putchar(' ');
+			m++;
 		}
+		_putchar('\\');
+		_putchar('\n');
+		i++;
 	}
+
+	if (n <= 0)
+		_putchar('\n');
 }}
