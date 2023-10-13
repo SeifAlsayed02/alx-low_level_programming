@@ -1,12 +1,15 @@
 #include "main.h"
+
 /**
  * more_numbers - Entry point
  *
  * Return: None.
  */
+
 void more_numbers(void)
 {
-	int i, j;
+	int i;
+	int j;;
 
 	i = 0;
 
