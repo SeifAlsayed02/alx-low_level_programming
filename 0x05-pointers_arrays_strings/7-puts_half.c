@@ -19,9 +19,9 @@ void puts_half(char *str)
 	size -= 1;
 
 	if (size % 2 == 0)
-		half = (size + 1) / 2;
+		half = (size + 2) / 2;
 	else
-		half = (size + 3) / 2;
+		half = (size + 2) / 2;
 
 	i = half;
 	while (i < size + 1)
