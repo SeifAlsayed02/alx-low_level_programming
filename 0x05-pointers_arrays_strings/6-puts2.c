@@ -13,8 +13,11 @@ void puts2(char *str)
 	while (str[i] != '\0')
 	{
 		size++;
+		i++;
 	}
 	size--;
+
+	i = 0;
 
 	while (str[i] != '\0')
 	{
