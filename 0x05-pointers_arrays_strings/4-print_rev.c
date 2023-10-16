@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * print_rev - Entry point
  * @s: The poniter of type char

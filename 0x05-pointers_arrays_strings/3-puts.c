@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * _puts - Entry point
  * @str: The poniter of type char
