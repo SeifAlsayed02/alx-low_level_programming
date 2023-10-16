@@ -21,7 +21,7 @@ void puts_half(char *str)
 	if (size % 2 == 0)
 		half = size / 2;
 	else
-		half = (size + 2) / 2;
+		half = (size + 4) / 2;
 
 	i = half;
 	while (i < size + 1)
