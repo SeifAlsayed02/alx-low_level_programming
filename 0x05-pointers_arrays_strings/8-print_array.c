@@ -17,5 +17,5 @@ void print_array(int *a, int n)
 		printf("%d, ", a[i]);
 	}
 	_putchar(a[n - 1]);
-	_putcha('\n');
+	_putchar('\n');
 }
