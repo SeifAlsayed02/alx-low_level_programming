@@ -16,7 +16,7 @@ void rev_string(char *s)
 
 	i--;
 
-	char temp[i];
+	char *temp[i];
 
 	while (i >= 0)
 	{
