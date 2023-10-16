@@ -16,9 +16,13 @@ void puts2(char *str)
 	}
 	size--;
 
-	for (i = 0; i < size; i++)
+	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
+		if (i + 2 > size)
+			break;
+		i += 2;
+
 	}
 	_putchar('\n');
 
