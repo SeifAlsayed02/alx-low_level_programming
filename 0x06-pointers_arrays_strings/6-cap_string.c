@@ -1,4 +1,5 @@
 #include "main.h"
+int checker(char flag);
 /**
  * *cap_string - Entry point
  * @c: The poniter of type char
