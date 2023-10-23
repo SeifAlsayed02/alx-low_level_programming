@@ -8,6 +8,7 @@
 char *_strstr(char *haystack, char *needle)
 {
 	int i, j, length;
+	int k = 0;
 	char *flag = NULL;
 
 	i = 0;
