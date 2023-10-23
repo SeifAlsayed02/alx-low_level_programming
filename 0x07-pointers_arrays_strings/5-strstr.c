@@ -20,23 +20,21 @@ char *_strstr(char *haystack, char *needle)
 
 	for (i = 0; haystack[i] != '\0'; i++)
 	{
-		k = i;
 		for (j = 0; needle[j] != '\0' && haystack[i] == needle[j]; j++)
 		{
 			if (haystack[i] == needle[j])
 				i++;
 			else
 			{
-				i = k;
+
 				break;
 			}
-	
 		}
 
 		if (j == length)
 		{
 			flag = (haystack + i - length);
-			break;
+			return (flag);
 		}
 	}
 
