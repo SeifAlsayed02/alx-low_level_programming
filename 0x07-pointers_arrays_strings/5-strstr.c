@@ -23,7 +23,7 @@ char *_strstr(char *haystack, char *needle)
 			++i;
 		}
 
-		if (j == len)
+		if (j == length)
 		{
 			flag = (haystack + i - length);
 			break;
