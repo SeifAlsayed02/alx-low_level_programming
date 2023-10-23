@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * *_strstr - Entry point
  * @haystack: The poniter of type char
