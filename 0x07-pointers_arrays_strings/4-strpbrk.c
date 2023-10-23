@@ -8,19 +8,23 @@
  */
 char *_strpbrk(char *s, char *accept)
 {
+	char *flag = NULL;
+
 	while (*s)
 	{
 		while (*accept)
 		{
 			if (*s == *accept)
 			{
-				s--;
-				return (s);
+				flag = s;
+				break;
 			}
 			accept++;
 		}
 		s++;
+		if (flag != NULL)
+			break;
 	}
-	return (NULL);
+	return (flag);
 
 }
