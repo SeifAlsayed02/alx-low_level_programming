@@ -2,7 +2,7 @@
  * *_memcpy - copies memory area.
  * @dest: Pointer of type char
  * @src: Pointer of type char
- * @n: the number 
+ * @n: the number
  *
  * Return: None.
  */
