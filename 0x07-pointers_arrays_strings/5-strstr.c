@@ -7,7 +7,7 @@
  */
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j, len;
+	int i, j, length;
 	char *flag = NULL;
 
 	i = 0;
