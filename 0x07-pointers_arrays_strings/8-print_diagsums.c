@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * print_diagsums - Entry point
  * @a: The poniter of type int
