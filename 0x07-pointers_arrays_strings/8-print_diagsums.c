@@ -6,18 +6,21 @@
  *
  * Return: None.
  */
+
 void print_diagsums(int *a, int size)
 {
-	int i = 0;
-	int main_diagonal = 0;
-	int right_diagonal = 0;
+
+	int dig = 0, inv_dig = 0;
+	int i;
 
 	for (i = 0; i < size; i++)
 	{
-		main_diagonal += a[i + (size * i)];
-		right_diagonal += a[(size - 1) + (size - 1) * i];
+
+		dig += a[i + (size * i)];
+		inv_dig += a[(size - 1) + (size - 1) * i];
+
 	}
 
-	printf("%d, %d\n", main_diagonal, right_diagonal);
+	printf("%d, %d\n", dig, inv_dig);
 
 }
