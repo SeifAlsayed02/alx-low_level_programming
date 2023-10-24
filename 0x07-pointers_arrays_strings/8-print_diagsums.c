@@ -9,18 +9,23 @@
 
 void print_diagsums(int *a, int size)
 {
+	int sum, i, step;
 
-	int dig = 0, inv_dig = 0;
-	int i;
-
+	sum = 0;
+	step = 0;
 	for (i = 0; i < size; i++)
 	{
-
-		dig += a[i + (size * i)];
-		inv_dig += a[(size - 1) + (size - 1) * i];
-
+		sum += *(a + step);
+		step += size + 1;
 	}
+	printf("%d, ", sum);
 
-	printf("%d, %d\n", dig, inv_dig);
-
+	sum = 0;
+	step = 0;
+	for (i = 0; i < size; i++)
+	{
+		step += size - 1;
+		sum += *(a + step);
+	}
+	printf("%d\n", sum);
 }
