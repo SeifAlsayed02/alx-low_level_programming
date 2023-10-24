@@ -23,5 +23,4 @@ void print_diagsums(int *a, int size)
 	}
 
 	printf("%d, %d\n", dig, inv_dig);
-
 }
