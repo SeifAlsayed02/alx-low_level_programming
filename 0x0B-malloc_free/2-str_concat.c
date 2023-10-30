@@ -17,16 +17,10 @@ char *str_concat(char *s1, char *s2)
 
 	if (s1 == NULL && s2 == NULL)
 		return (NULL);
-	else if (s1 == NULL)
-	{
-		c = s2;
-		return (c);
-	}
-	else if (s2 == NULL)
-	{
-		c = s1;
-		return (c);
-	}
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
 	while (s1[size1] != '\0')
 		size1++;
