@@ -1,7 +1,7 @@
 #include "dog.h"
 /**
  * free_dog - Entry point
- * @d: The dog 
+ * @d: The dog
  *
  * Return: None.
  */
