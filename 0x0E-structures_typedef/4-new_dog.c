@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <string.h>
 /**
  * new_dog - Entry point
  * @name: The name
