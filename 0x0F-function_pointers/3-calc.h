@@ -3,10 +3,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * struct op - Entry point
+ * struct op - Struct op
  *
  * @op: The operator
- * @f: The function
+ * @f: The function associated
  */
 typedef struct op
 {
