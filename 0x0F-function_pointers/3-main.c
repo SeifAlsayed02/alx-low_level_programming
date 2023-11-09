@@ -1,16 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
 #include "3-calc.h"
+
 /**
- * main - Entry point
- * @argc: Argument count
- * @argv: Argument list
- *
- * Return: int
- */
-int main(int argc, char **argv)
+* main - Entry point
+* @argc: number of args
+* @argv: array contain args
+*
+* Return: Always 0 (success)
+*/
+
+int (*get_op_func(char *s))(int, int);
+
+int main(int argc, char *argv[])
 {
+
+	int a, b, result;
+
+	char *operator;
+
 	int (*op_func)(int, int);
-	int x, y, Z;
-	char *f;
 
 	if (argc != 4)
 	{
@@ -18,23 +27,16 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-	f = argv[2];
-	x = atoi(argv[1]);
-	y = atoi(argv[3]);
-	op_func = get_op_func(f);
+	a = atoi(argv[1]);
 
-	if (op_func == NULL)
-	{
-		printf("Error\n");
-		exit(99);
-	}
+	operator = argv[2];
 
-	if ((f[0] == '/' || f[0] == '%') && y == 0)
-	{
-		printf("Error\n");
-		exit(100);
-	}
-	z = op_func(x, y);
-	printf("%d\n", z);
-	return (0);
+	b = atoi(argv[3]);
+
+	op_func = get_op_func(operator);
+	result = op_func(a, b);
+
+	printf("%d\n", result);
+
+	return (0);
 }
