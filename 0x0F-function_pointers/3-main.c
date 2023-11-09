@@ -14,9 +14,9 @@ int (*get_op_func(char *s))(int, int);
 
 int main(int argc, char *argv[])
 {
-	int n1, n2, ans;
-	char *op;
 	int (*op_func)(int, int);
+	int x, y, ans;
+	char *op;
 
 	if (argc != 4)
 	{
@@ -25,8 +25,8 @@ int main(int argc, char *argv[])
 	}
 
 	op = argv[2];
-	n1 = atoi(argv[1]);
-	n2 = atoi(argv[3]);
+	x = atoi(argv[1]);
+	y = atoi(argv[3]);
 	op_func = get_op_func(op);
 
 	if (op_func == NULL)
@@ -35,12 +35,12 @@ int main(int argc, char *argv[])
 		exit(99);
 	}
 
-	if ((op[0] == '/' || op[0] == '%') && n2 == 0)
+	if ((op[0] == '/' || op[0] == '%') && y == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	ans = op_func(n1, n2);
+	ans = op_func(x, y);
 	printf("%d\n", ans);
 	return (0);
 }
