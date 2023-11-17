@@ -1,6 +1,6 @@
 ; File: 101-hello_holberton.asm
 ; Auth: Seif Elsayed
-; 
+;
 
 extern printf
 
