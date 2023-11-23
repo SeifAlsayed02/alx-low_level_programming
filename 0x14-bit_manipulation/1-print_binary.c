@@ -1,5 +1,4 @@
 #include "main.h"
-#include <limits.h>
 /**
  * print_binary - prints the binary representation of a number
  * @n: the number to be converted
@@ -8,21 +7,25 @@
  */
 void print_binary(unsigned long int n)
 {
-	int i = sizeof(unsigned long int) * 8 - 1;
-	unsigned long int mask;
-	int num_bits = sizeof(unsigned long int) * CHAR_BIT;
+	int bit;
+	int start = 0;
+	unsigned int mask = 1U << (sizeof(unsigned long int) * 8 - 1);
 
-	for (i = num_bits - 1 ; i >= 0; i--)
+	if (n == 0)
 	{
-		mask = 1UL << i;
-		if (n & mask)
-		{
-			_putchar('1');
-		}
-		else
-		{
-			_putchar('0');
-		}
+		_putchar('0');
+		return;
 	}
-	_putchar('\n');
+
+	while (mask > 0)
+	{
+		bit = n & mask;
+		if (bit > 0)
+			start = 1;
+		if (start == 1)
+		{
+			_putchar(bit == 0 ? '0' : '1');
+		}
+		mask >>= 1;
+	}
 }
