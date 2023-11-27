@@ -20,7 +20,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (count);
 
 	flag = read(file, buf, 1);
-	while (flag > 0 && count < letters)
+	while (flag > 0 && count < (ssize_t)letters)
 	{
 		count += write(STDOUT_FILENO, buf, 1);
 		flag = read(file, buf, 1);
