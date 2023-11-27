@@ -9,19 +9,21 @@
 int create_file(const char *filename, char *text_content)
 {
 	int file = -1;
+	int length;
 
 	if (filename == NULL)
 		return (file);
 
 	if (text_content == NULL)
 		return (file);
+	length = strlen(text_content);
 
 	file = open(filename, O_WRONLY | O_CREAT | O_TRUNC, 0600);
 
-	if (file == NULL)
+	if (file == -1)
 		return (-1);
 
-	write(file, text_content, strlen(text_content));
+	write(file, text_content, length);
 
 	return (1);
 
