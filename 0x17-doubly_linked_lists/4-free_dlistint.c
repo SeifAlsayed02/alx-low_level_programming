@@ -18,6 +18,6 @@ void free_dlistint(dlistint_t *head)
 	{
 		tmp = node->next;
 		free(node);
-		node = temp;
+		node = tmp;
 	}
 }
